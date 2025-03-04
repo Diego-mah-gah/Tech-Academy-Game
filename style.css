@@ -8,8 +8,16 @@ header, footer{
   width: 100%;
   background-color:tomato;
   box-shadow: 1px 1px 10px #CCC;
-  padding:30px;
+  padding:20px;
   box-sizing:border-box;
+}
+footer{
+  position:fixed;
+  bottom:0;
+  right:0;
+  left:0;
+  margin:20px;
+  width:97%;
 }
 header nav{
   float: right;
