@@ -1,52 +1,63 @@
-body{
+body {
   font-family: Arial, Verdana, Tahoma;
-  background-color: gray;
+  background-color: rgb(37, 105, 105);
   text-align: center;
-  margin:30px;
+  margin: 30px;
 }
-header, footer{
+header {
+  display: inline-block;
+  nav {
+    margin: 5px;
+    border-radius: 10px;
+    border: black;
+    box-sizing: border-box;
+  }
+}
+header,
+footer {
   width: 100%;
-  background-color:tomato;
-  box-shadow: 1px 1px 10px #CCC;
-  padding:20px;
-  box-sizing:border-box;
+  background-color: rgb(128, 40, 25);
+  box-shadow: 1px 1px 10px #ccc;
+  padding: 20px;
+  box-sizing: border-box;
 }
-footer{
-  position:fixed;
-  bottom:0;
-  right:0;
-  left:0;
-  margin:20px;
-  width:97%;
+footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 20px;
+  width: 97%;
 }
-header nav{
+header nav {
   float: right;
-  margin-top:-8px;
+  margin-top: -8px;
 }
-header nav a{
+header nav a {
   text-decoration: none;
-  color:black;
-  margin:15px;
+  color: black;
+  margin: 15px;
 }
-header nav a:hover{
-  color:#333;
+header nav a:hover {
+  color: #333;
 }
-.img{
-  width:100%;
+.img {
+  width: 100%;
 }
-section{
-  width:70%;
-  float:left;
+section {
+  width: 70%;
+  float: left;
 }
-aside{
-  width:30%;
-  float:right;
+aside {
+  width: 30%;
+  float: right;
 }
-.clearfix{
+.clearfix {
   clear: both;
 }
-footer p{
+footer p {
   text-align: center;
+  font-family: ARIAL, Geneva, Tahoma, sans-serif;
+  font-size: larger;
 }
 .logo {
   max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
@@ -57,16 +68,36 @@ footer p{
   align-items: center; /* Alinha verticalmente */
   justify-content: flex-start; /* Mantém a logo à esquerda */
 }
-@media(max-width:700px){
-  header{
-    text-align:center;
-    display:inline-block;
-    float:none;
+@media (max-width: 700px) {
+  header {
+    text-align: center;
+    display: inline-block;
+    float: none;
   }
-  header nav, section, aside{
+  header nav,
+  section,
+  aside {
     width: 100%;
   }
-  header nav a{
+  header nav a {
     margin: 5px;
   }
+}
+.fontsize {
+  font-size: 20px;
+}
+.btn {
+  display: inline-block;
+  position: relative;
+  background: violet;
+  padding: 7px 12px 7px 12px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+.btn:hover {
+  transition: 0.2s;
+  background-color: red;
+}
+p {
+  margin: 20px;
 }
