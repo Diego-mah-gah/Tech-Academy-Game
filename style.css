@@ -1,103 +1,54 @@
-body {
-  font-family: Arial, Verdana, Tahoma;
-  background-color: rgb(37, 105, 105);
-  text-align: center;
-  margin: 30px;
-}
-header {
-  display: inline-block;
-  nav {
-    margin: 5px;
-    border-radius: 10px;
-    border: black;
-    box-sizing: border-box;
-  }
-}
-header,
-footer {
-  width: 100%;
-  background-color: rgb(128, 40, 25);
-  box-shadow: 1px 1px 10px #ccc;
-  padding: 20px;
+* {
+  margin: o;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "Gill Sans";
 }
-footer {
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 20px;
-  width: 97%;
+html {
+  scroll-behavior: smooth;
 }
-header nav {
-  float: right;
-  margin-top: -8px;
-}
-header nav a {
-  text-decoration: none;
-  color: black;
-  margin: 15px;
-}
-header nav a:hover {
-  color: #333;
-}
-.img {
-  width: 100%;
-}
-section {
-  width: 70%;
-  float: left;
-}
-aside {
-  width: 30%;
-  float: right;
-}
-.clearfix {
-  clear: both;
-}
-footer p {
-  text-align: center;
-  font-family: ARIAL, Geneva, Tahoma, sans-serif;
-  font-size: larger;
-}
-.logo {
-  max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
-  height: auto;
-}
-.container {
+.header {
+  position: fixed;
   display: flex;
-  align-items: center; /* Alinha verticalmente */
-  justify-content: flex-start; /* Mantém a logo à esquerda */
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 30px 80px;
 }
-@media (max-width: 700px) {
-  header {
-    text-align: center;
-    display: inline-block;
-    float: none;
-  }
-  header nav,
-  section,
-  aside {
-    width: 100%;
-  }
-  header nav a {
-    margin: 5px;
-  }
+.navbar a {
+  color: white;
+  padding: 15px;
 }
-.fontsize {
-  font-size: 20px;
+navbar:hover {
+  color: red;
+  text-decoration: none;
 }
-.btn {
-  display: inline-block;
-  position: relative;
-  background: violet;
-  padding: 7px 12px 7px 12px;
-  border: 2px solid;
-  border-radius: 20px;
+.title-h1 {
+  text-align: center;
+  color: white;
+  font-family: "Gill Sans";
 }
-.btn:hover {
-  transition: 0.2s;
-  background-color: red;
+.text-about {
+  float: right;
+  color: white;
+  font-size: 23px;
+  background: transparent;
 }
-p {
-  margin: 20px;
+.body {
+  background-image: url(https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?t=st=1742859816~exp=1742863416~hmac=3e56c10f4833ad1d10a12e40c00959295c4e809864f29225f7c3fca0f0a777c3&w=1380);
+  width: 100% no-repeat;
+  position: inherit;
+}
+.footer-about {
+  text-align: center;
+  background-color: transparent;
+  position: absolute;
+  width: 99.4%;
+  bottom: 0;
+  color: white;
+  font-family: "Gill Sans";
 }
