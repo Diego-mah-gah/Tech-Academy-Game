@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width"
+			,
+			initial-scale="1.0" />
+		<title>Home Page</title>
+
+		<link
+			rel="stylesheet"
+			href="../styles/style.css" />
+	</head>
+
+	<body>
+		<div id="globalContainer">
+			<div id="mainBar">
+				<button
+					onclick="switchMainBarVisibility()"
+					class="mainBarButton">
+					<a href="#"><img src="../assets/menu.svg" /></a>
+				</button>
+				<header id="navBar">
+					<nav>
+						<ul>
+							<li>
+								<a
+									href="/"
+									title="Home Page"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="/about"
+									title="About Page"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="/photos"
+									title="Photos Page"
+									>Photos</a
+								>
+							</li>
+							<li>
+								<a href="/game">Game</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+			<div id="mainContainer">
+				<div class="title">
+					<h1>Home</h1>
+				</div>
+				<div class="contentContainer">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+					voluptatem reprehenderit soluta delectus odio in asperiores, vero
+					porro aut necessitatibus explicabo totam eaque? Necessitatibus modi
+					veritatis fugit explicabo molestias labore?
+				</div>
+				<div class="contentContainer">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+					voluptatem reprehenderit soluta delectus odio in asperiores, vero
+					porro aut necessitatibus explicabo totam eaque? Necessitatibus modi
+					veritatis fugit explicabo molestias labore?
+				</div>
+				<div class="contentContainer">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+					voluptatem reprehenderit soluta delectus odio in asperiores, vero
+					porro aut necessitatibus explicabo totam eaque? Necessitatibus modi
+					veritatis fugit explicabo molestias labore?
+				</div>
+			</div>
+		</div>
+		<script>
+			function switchMainBarVisibility() {
+				const mainBar = document.getElementById("mainBar");
+				if (mainBar.style.left != "0px") {
+					mainBar.style.left = "0px";
+				} else {
+					mainBar.style.left = "-90px";
+				}
+				console.log(mainBar.style.left);
+			}
+		</script>
+		<footer id="pageFooter"><p>Created By</p></footer>
+	</body>
+</html>
