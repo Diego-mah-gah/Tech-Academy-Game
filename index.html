@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Home Page</title>
+
+	<link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+	<div id="globalContainer">
+		<div id="mainBar">
+			<button onclick="switchMainBarVisibility()" class="mainBarButton">
+				<a href="#"><img src="../assets/menu.svg" /></a>
+			</button>
+			<header id="navBar">
+				<nav>
+					<ul>
+						<li>
+							<a href="#home" title="Home Page">Home</a>
+						</li>
+						<li>
+							<a href="#about" title="About Page">About</a>
+						</li>
+						<li>
+							<a href="#photos" title="Photos Page">Photos</a>
+						</li>
+						<li>
+							<a href="#game" title="Game Page">Game</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<div id="mainContainer">
+			<div class="title">
+				<h1 id="home">Home</h1>
+			</div>
+			<div id="home" class="contentContainer">
+				<div class="text-img-title">
+					<h1>The Game</h1>
+					<img src="../assets/vampire3.png" alt="Ilustrate Image" class="contentImage" />
+					<p class="text-img">
+						This is a game where our character wants to kill his race to conquer the throne<br>
+						Help him to achieve his goal<br>
+					</p>
+				</div>
+			</div>
+			<div id="about" class="contentContainer">
+				<div class="text-about-title">
+					<h1>About</h1>
+				</div>
+				<div class="aboutContent">
+					<p>
+						Game created for my university project.<br>
+						My goal is to create a game that is fun and engaging.<br>
+						I want to create a game that is easy to play and understand.<br>
+						I hope you enjoy playing it as much as I enjoyed creating it.<br>
+						Thank you for playing my game!<br>
+					</p>
+				</div>
+			</div>
+			<div id="photos" class="contentContainer">
+				<h1>Photos</h1>
+				<div class="photo-gallery">
+					<img src="../assets/photos-gallery/Img-game-title.png" alt="Photo 1" class="photo" />
+					<img src="../assets/photos-gallery/game-phase2-moon.png" alt="Photo 2" class="photo" />
+					<img src="../assets/photos-gallery/game-phase3.png" alt="Photo 3" class="photo" />
+				</div>
+			</div>
+			<div id="lightbox" class="lightbox">
+				<img id="lightboxImage" src="" alt="Expanded Image" />
+				<span class="close-lightbox" onclick="closeLightbox()">×</span>
+			</div>
+			<div id="game" class="contentContainerGame">
+				<div class="title-game">
+					<h1>Game</h1>
+
+					<p class="game-text">
+						<a href="game.html" alt="game-page">Play</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer id="pageFooter">
+		<p>
+		<h4>Created By Kawã Diego</h4>
+		</p>
+		<p>All rights reserved</p>
+		<div class="contactForm">
+			<a href="contact.html" class="contact-button">Contact Us</a>
+		</div>
+	</footer>
+
+	<script>
+		function switchMainBarVisibility() {
+			const mainBar = document.getElementById("mainBar");
+			if (mainBar.style.left != "0px") {
+				mainBar.style.left = "0px";
+			} else {
+				mainBar.style.left = "-90px";
+			}
+			console.log(mainBar.style.left);
+		}
+
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				target.scrollIntoView({ behavior: 'smooth' });
+
+				target.classList.add('blurEffect');
+				setTimeout(() => {
+					target.classList.remove('blurEffect');
+				}, 500); // Remove o efeito após 0.5s
+			});
+		});
+
+		document.querySelectorAll('.photo').forEach(image => {
+			image.addEventListener('click', function () {
+				const lightbox = document.getElementById('lightbox');
+				const lightboxImage = document.getElementById('lightboxImage');
+				lightboxImage.src = this.src;
+				lightbox.style.display = 'flex';
+			});
+		});
+
+		function closeLightbox() {
+			const lightbox = document.getElementById('lightbox');
+			lightbox.style.display = 'none';
+		}
+	</script>
+</body>
+
+</html>
