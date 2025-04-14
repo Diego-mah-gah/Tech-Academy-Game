@@ -208,6 +208,21 @@ body {
     background-color: var(--cl-gray-600);
     border-radius: var(--rd-md);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    a {
+        text-decoration: none;
+
+        p {
+            color: var(--cl-white);
+            font-size: var(--fs-lg);
+            font-weight: var(--fw-bold);
+            padding: var(--sp-3) var(--sp-5);
+            border-radius: var(--rd-sm);
+            background-color: var(--cl-green-500);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-left: 0 300px;
+        }
+    }
 }
 
 .gameIframe {
@@ -218,15 +233,19 @@ body {
 
 @media(min-width:801px) {
     .contentContainerGame {
-        height:500px;
-        margin:100px 340px;
+        height: 500px;
+        margin: 100px 340px;
         padding: 0;
+        p{
+            margin:0 300px;
+        }
     }
 
     .gameIframe {
         margin-top: 40px;
-        height:400px;
+        height: 400px;
         width: 800px;
+        margin-left:30px;
     }
 }
 
@@ -257,8 +276,11 @@ body {
     }
 
     .contentContainerGame {
-        margin:120px 50px;
+        margin: 120px 50px;
         padding: 0;
+        p {
+            margin:0 15px;
+        }
     }
 
     .gameIframe {
@@ -294,16 +316,18 @@ body {
 
 #pageFooter {
     position: absolute;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	background-color: var(--cl-crimson);
-	padding: var(--sp-4);
-	box-shadow: 0 -2px 5px rgba(0, 0, 0, 1);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--cl-crimson);
+    padding: var(--sp-4);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 1);
+
     p {
-		margin: 2px;
-	}
-		a {
-			margin:10px;
-		}
+        margin: 2px;
+    }
+
+    a {
+        margin: 10px;
+    }
 }
