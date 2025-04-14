@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="../styles/contact.css" />
+</head>
+
+<body>
+    <div id="globalContainer">
+        <div id="mainBar">
+            <button onclick="switchMainBarVisibility()" class="mainBarButton">
+                <a href="#"><img src="../assets/menu.svg" /></a>
+            </button>
+            <header id="navBar">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../../index.html#home" title="Home Page">Home</a>
+                        </li>
+                        <li>
+                            <a href="../../index.html#about" title="About Page">About</a>
+                        </li>
+                        <li>
+                            <a href="../../index.html#photos" title="Photos Page">Photos</a>
+                        </li>
+                        <li>
+                            <a href="../../index.html#game">Game</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="contactContainer">
+            <h1>Contact Us</h1>
+            <form method="get" action="https://professorburnes.com.br/teste-form.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="message">Message:</label>
+                <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit"><i class="fas fa-check">Send Message</i></button>
+            </form>
+        </div>
+    </div>
+    <footer id="pageFooter">
+        <p><h4>Created By Kawã Diego</h4></p>
+        <p>All rights reservedª</p>
+        <div class="contactForm">
+            <a href="contact.html" class="contact-button">Contact Us</a>
+        </div>
+    </footer>
+    <script>
+        function switchMainBarVisibility() {
+            const mainBar = document.getElementById("mainBar");
+            if (mainBar.style.left != "0px") {
+                mainBar.style.left = "0px";
+            } else {
+                mainBar.style.left = "-90px";
+            }
+            console.log(mainBar.style.left);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+
+                target.classList.add('blurEffect');
+                setTimeout(() => {
+                    target.classList.remove('blurEffect');
+                }, 500); // Remove o efeito após 0.5s
+            });
+        });
+    </script>
+
+</body>
+
+</html>
